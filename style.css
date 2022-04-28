@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.grid-container {
+    border: solid 4px rgb(224, 224, 20);
+    margin: 5px;
+    /* habilitar grid/ la grilla*/
+    display: grid;
+    /*declarar filas*/
+    grid-template-rows: 200px 200px 200px;
+    /* declaro las columnas*/
+    /*grid-template-columns: 200px 200px 200px;*/
+    /*grid-template-columns: auto auto auto;*/
+
+    /*   fr para filas o columnas*/
+    grid-template-columns: 1fr 2fr 1fr;
+    /* repeat para no repetir todas las columnas una por una si son todas iguales*/
+    /* grid-template-columns: repeat(3, 1fr), 2fr;*/
+
+    /*   gap    */
+    /* ya no se usan estan decretadas
+    grid-column-gap: ;
+    grid-row-gap: ;
+    grid-gap: ;*/
+    column-gap: 10px;
+    row-gap: 30px;
+
+    /*primer valor fila segundo columna*/
+    /* gap: 30px 10px;*/
+
+}
+
+.grid-item {
+    border: solid 2px #05913a;
+    background-color: rgb(43, 159, 226);
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.primer-item{
+    /*concepto de lineas*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    /*primero es donde empieza el segundo donde termina*/
+    /*grid-column: 1 / 3;
+    grid-row: 1 / 3;*/
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.segundo-item{
+    /*span*/
+    grid-column: 1 / span 3;
+}
+
+
